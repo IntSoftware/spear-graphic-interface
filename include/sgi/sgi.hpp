@@ -10,8 +10,14 @@
 
 namespace spear::sgi {
 
-bool initGraphicEngineGlobal();
-void terminateGraphicEngineGlobal();
+class GraphicEngineGlobal {
+public:
+    virtual bool initialize() = 0;
+    virtual void shutdown() = 0;
+    virtual ~GraphicEngineGlobal() = default;
+};
+
+GraphicEngineGlobal& graphic_global();
 
 class GraphicEngine;
 class Window;
