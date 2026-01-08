@@ -1,5 +1,5 @@
-#ifndef SPEAR_SGI_SGI_HPP
-#define SPEAR_SGI_SGI_HPP
+#ifndef SPEAR_GRAPHIC_INTERFACE_HPP
+#define SPEAR_GRAPHIC_INTERFACE_HPP
 
 #define SGI_VERSION_MAJOR 0
 #define SGI_VERSION_MINOR 0
@@ -8,7 +8,7 @@
 #include <memory>
 #include <string>
 
-namespace spear::sgi {
+namespace spear::graphics {
 
 class GraphicEngineGlobal {
 public:
@@ -17,7 +17,7 @@ public:
     virtual ~GraphicEngineGlobal() = default;
 };
 
-GraphicEngineGlobal& graphic_global();
+GraphicEngineGlobal& global();
 
 class GraphicEngine;
 class Window;
@@ -48,6 +48,6 @@ public:
 
 std::unique_ptr<GraphicEngine> createGraphicEngine();
 
-} // namespace spear::sgi
+} // namespace spear::graphics
 
-#endif // SPEAR_SGI_SGI_HPP
+#endif // SPEAR_GRAPHIC_INTERFACE_HPP
